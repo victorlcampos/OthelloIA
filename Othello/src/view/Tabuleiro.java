@@ -26,8 +26,6 @@ public class Tabuleiro {
 	private JLabel lblJogadorVez;
 	private JLabel labelJogador;
 
-	
-
 	private Tabuleiro() {
 		initializeView();
 	}
@@ -160,11 +158,19 @@ public class Tabuleiro {
 
 		}
 		
-		labelJogador.setText(jogador == StatusCasa.PECA_PRETA ? "PEÇA PRETA" : "PEÇA BRANCA");
+		labelJogador.setText(jogador == StatusCasa.PECA_PRETA ? "PEï¿½A PRETA" : "PEï¿½A BRANCA");
 		
 		labelPontosBrancas.setText(String.valueOf(pontosBrancas));
 		labelPontosPretas.setText(String.valueOf(pontosPretas));
 
+	}
+
+	public void alertaJogadaInvalida() {
+		try {
+			throw new Exception("MÃ©todo nÃ£o implementado");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
